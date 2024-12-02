@@ -11,7 +11,7 @@ int main() {
     int maxCount = 0;            // Max length
     int count = 1;        // Current length of the group
 
-    for (int i = 1; i < length; i++) {
+    for (int i=1; i<length; i++) {
         if (input[i] == input[i - 1]) {
             count++;
         } else {
