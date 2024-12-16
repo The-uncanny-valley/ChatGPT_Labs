@@ -6,7 +6,7 @@ using namespace std;
 
 // Function Y(x)
 double y(double x) {
-    return cbrt(1 + x); // Calculate the cube root
+    return cbrt(1 + x);
 }
 
 // Function to calculate factorial
@@ -32,7 +32,7 @@ double product_sequence(int k) {
 double s(double x, double eps, int &iterations) {
     double sum = 1.0 + x / 3.0; // Initial value of the sum (first two terms of the series)
     double term; // Current term of the series
-    iterations = 0; // Number of iterations
+    iterations = 0;
     int k = 2; // Initial index k
     
     do {
