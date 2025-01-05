@@ -4,22 +4,22 @@
 
 using namespace std;
 
-// Function Y(x)
+// Y(x)
 double y(double x) {
     return cbrt(1 + x);
 }
 
-// Function to calculate factorial
+// факториал
 unsigned long long factorial(int n) {
     if (n == 0 || n == 1) return 1;
-    unsigned long long result = 1;
+    unsigned long long result = 1; // беззнаковый тип данных
     for (int i = 2; i <= n; ++i) {
         result *= i;
     }
     return result;
 }
 
-// Function to calculate the product 1 * 2 * 5 * 8 * ... * (3k - 4)
+//  произведение 1 * 2 * 5 * 8 * ... * (3k - 4)
 double product_sequence(int k) {
     double product = 1.0;
     for (int i = 2; i <= k; ++i) {
@@ -28,12 +28,12 @@ double product_sequence(int k) {
     return product;
 }
 
-// Function to compute the series S(x) with a given precision eps
+// Вычисление ряда S(x)
 double s(double x, double eps, int &iterations) {
-    double sum = 1.0 + x / 3.0; // Initial value of the sum (first two terms of the series)
-    double term; // Current term of the series
+    double sum = 1.0 + x / 3.0; // Начальное значение
+    double term; // Текущее
     iterations = 0;
-    int k = 2; // Initial index k
+    int k = 2; // индекс k
     
     do {
         double numerator = pow(-1, k - 1) * product_sequence(k) * pow(x, k);
@@ -47,7 +47,7 @@ double s(double x, double eps, int &iterations) {
     return sum;
 }
 
-// Main function to print the table of Y(x) and S(x) values
+// Печать таблицы значений Y(x) и S(x)
 void print_table(double a, double b, double h, double eps) {
     cout << setw(10) << "x" 
          << setw(15) << "Y(x)" 
@@ -68,12 +68,12 @@ void print_table(double a, double b, double h, double eps) {
 }
 
 int main() {
-    double a = -0.9; // Start of the interval
-    double b = 0.9;  // End of the interval
-    double h = 0.1;  // Step size for x
-    double eps = 0.001; // Given precision
+    double a = -0.9; // от
+    double b = 0.9;  // до
+    double h = 0.1;  // шаг x
+    double eps = 0.001; // заданная точность
     
-    cout << "Table of Y(x) and S(x) values with precision eps = " << eps << ":\n";
+    cout << "Таблица значений точностью до " << eps << ":\n";
     print_table(a, b, h, eps);
     
     return 0;
