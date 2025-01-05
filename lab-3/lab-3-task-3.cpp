@@ -7,7 +7,7 @@ using namespace std;
 int main() {
     double a, b, h, x, y, s, p;
     int n, i;
-    cout << "Enter a, b, n" << endl;
+    cout << "Введите a, b, n" << endl;
     cin >> a >> b >> n;
     x = a;
     h = (b - a) / 10;
