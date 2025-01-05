@@ -3,17 +3,17 @@ using namespace std;
 
 int main() {
     int k;
-    cout << "Enter the number of elements in the array: ";
+    cout << "Количество элементов: ";
     cin >> k;
 
     int arr[k];
-    cout << "Enter the elements of the array: ";
+    cout << "Введите элементы: ";
     for (int i = 0; i < k; i++) {
         cin >> arr[i];
     }
 
-    int maxCount = 0;   // maximum number of occurrences
-    int mostFrequent;   // most frequently occurring number
+    int maxCount = 0;   // максимальное число повторений
+    int mostFrequent;   // самое частое число
 
     for (int i = 0; i < k; i++) {
         int count = 0;
@@ -28,7 +28,7 @@ int main() {
         }
     }
 
-    cout << "The most frequently occurring number is: " << mostFrequent << " (occurs " << maxCount << " times)" << endl;
+    cout << "Самое частое число: " << mostFrequent << " (встречается " << maxCount << " раз)" << endl;
 
     return 0;
 }
