@@ -13,7 +13,7 @@ struct Bus {
     string arrivalTime;         // Время прибытия
 };
 
-// Функция для добавления рейсов в файл
+// Добавление рейсов в файл
 void addBuses(const string& filename) {
     ofstream file(filename, ios::binary | ios::app);
     if (!file) {
@@ -27,10 +27,10 @@ void addBuses(const string& filename) {
 
     for (int i = 0; i < count; ++i) {
         Bus bus;
-        cout << "\nРейс " << (i + 1) << ":\n";
+        cout << "\nРейс" << (i + 1) << ":\n";
         cout << "Номер рейса: ";
         cin >> bus.number;
-        cin.ignore(); // Убираем лишний символ новой строки
+        cin.ignore(); // удалить лишний символ новой строки
         cout << "Пункт назначения: ";
         getline(cin, bus.destination);
         cout << "Время отправления (HH:MM): ";
@@ -97,7 +97,7 @@ int main() {
             case '3':
                 return 0;
             default:
-                cout << "Неверный выбор, попробуйте снова.\n";
+                cout << "Неверный выбор\n";
         }
     }
 }
