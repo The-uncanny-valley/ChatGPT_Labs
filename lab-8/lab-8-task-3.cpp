@@ -28,10 +28,10 @@ double product_sequence(int k) {
     return product;
 }
 
-// Вычисление ряда S(x)
+// вычисление ряда S(x)
 double s(double x, double eps, int &iterations) {
-    double sum = 1.0 + x / 3.0; // Начальное значение
-    double term; // Текущее
+    double sum = 1.0 + x / 3.0; // начальное значение
+    double term; // текущее
     iterations = 0;
     int k = 2; // индекс k
     
@@ -47,7 +47,7 @@ double s(double x, double eps, int &iterations) {
     return sum;
 }
 
-// Печать таблицы значений Y(x) и S(x)
+// вывод таблицы значений Y(x) и S(x)
 void print_table(double a, double b, double h, double eps) {
     cout << setw(10) << "x" 
          << setw(15) << "Y(x)" 
