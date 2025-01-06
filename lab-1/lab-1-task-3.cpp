@@ -12,16 +12,13 @@ int main() {
     cout << "z:";
     cin >> z;
 
-    // Числитель первой части
-    a = 1 + pow(sin(x + y), 2.0) * pow(x, fabs(y));
+    a = 1 + pow(sin(x + y), 2.0);
 
-    // Знаменатель первой части
     b = fabs(x - ((2 * y) / (1 + pow(x, 2.0) * pow(y, 2.0))));
 
-    // Вторая часть выражения
-    c = pow(cos(atan(1.0 / z)), 2.0);
+    c = pow(cos(atan(1 / z)), 2.0);
 
-    s = a / b + c;
+    s = a / b * pow(x, fabs(y)) + c;
 
     cout << "Result s = " << s << endl;
 
