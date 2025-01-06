@@ -3,27 +3,28 @@
 using namespace std;
 
 int main() {
+    setlocale(LC_ALL, "RU"); // для работы с русским языком
     char input[100];
-    cout << "Enter a string: ";
+    cout << "Введите строку: ";
     cin >> input;
 
-    int length = strlen(input);  // Determine the string length
-    int maxCount = 0;            // Max length
-    int count = 1;        // Current length of the group
+    int length = strlen(input);  // длина строки
+    int maxCount = 0;            // максимальное значение длины
+    int count = 1;        // длина текущей последовательности
 
     for (int i=1; i<length; i++) {
         if (input[i] == input[i - 1]) {
             count++;
         } else {
-            // If the sequence is interrupted, update maxCount if the current group is longer
+            // если последовательность прервана и при это она больше значения в max, то max обновляется
             if (count > maxCount) {
                 maxCount = count;
             }
-            count = 1;  // Reset current group length for a new group
+            count = 1;  // сброс
         }
     }
 
-    // Check the last group
+    // проверка последнего
     if (count > maxCount) {
         maxCount = count;
     }

@@ -5,9 +5,9 @@ using namespace std;
 
 
 int main() {
+    setlocale(LC_ALL, "RU"); // для работы с русским языком
     double x, y, result, c;
 
-    // Ввод значений x и y
     cout << "x: ";
     cin >> x;
     cout << "y: ";
@@ -40,7 +40,7 @@ int main() {
         cout << "Выбрано x - y = 0." << endl;
     } else if ((x - y) > 0) {
         if (x <= 0) { // Проверка для логарифма
-            std::cout << "ln(x) не существует для x <= 0!" << endl;
+            cout << "ln(x) не существует для x <= 0!" << endl;
             return 1;
         }
         c = pow(f - y, 2.0) + log(x);

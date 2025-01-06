@@ -5,6 +5,7 @@
 using namespace std;
 
 int main() {
+    setlocale(LC_ALL, "RU"); // для работы с русским языком
     double a, b, h, x, y, s, p;
     int n, i;
     cout << "Введите a, b, n" << endl;

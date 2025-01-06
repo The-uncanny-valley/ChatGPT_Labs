@@ -17,6 +17,7 @@ int main() {
     Student students[100]; // массив
 
     for (int i = 0; i < n; i++) {
+        setlocale(LC_ALL, "RU"); // для работы с русским языком
         cout << "Введите информацию " << i + 1 << ":\n";
         cout << "Имя: ";
         cin.ignore(); // пропуск первого символа

@@ -3,6 +3,7 @@
 using namespace std;
 
 int main() {
+    setlocale(LC_ALL, "RU"); // для работы с русским языком
     double x, y, z, a, b, c, s; // значения
     
     cout << "x:";
@@ -20,7 +21,7 @@ int main() {
 
     s = a / b * pow(x, fabs(y)) + c;
 
-    cout << "Result s = " << s << endl;
+    cout << "Ответ = " << s << endl;
 
     return 0;
 }

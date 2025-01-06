@@ -73,6 +73,7 @@ void listBuses(const string& filename, const string& specifiedTime) {
 }
 
 int main() {
+    setlocale(LC_ALL, "RU"); // для работы с русским языком
     string filename = "buses.dat";
     char choice;
     string specifiedTime;

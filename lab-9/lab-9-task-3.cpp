@@ -18,6 +18,7 @@ int countDigits(int number) {
 
 
 int main() {
+    setlocale(LC_ALL, "RU"); // для работы с русским языком
     int n;
 
     cout << "Введите число: ";

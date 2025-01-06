@@ -68,6 +68,7 @@ void print_table(double a, double b, double h, double eps) {
 }
 
 int main() {
+    setlocale(LC_ALL, "RU"); // для работы с русским языком
     double a = -0.9; // от
     double b = 0.9;  // до
     double h = 0.1;  // шаг x

@@ -2,6 +2,7 @@
 using namespace std;
 
 int main() {
+    setlocale(LC_ALL, "RU"); // для работы с русским языком
     int k;
     cout << "Количество элементов: ";
     cin >> k;
