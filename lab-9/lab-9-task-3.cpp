@@ -18,15 +18,15 @@ int countDigits(int number) {
 
 
 int main() {
-    int number;
+    int n;
 
     cout << "Введите число: ";
-    cin >> number;
+    cin >> n;
 
-    number = abs(number);
+    n = abs(n);
 
-    cout << "Количество цифр (рекурсия): " << countDigitsRecursive(number) << endl;
-    cout << "Количество цифр (без рекурсии): " << countDigits(number) << endl;
+    cout << "Количество цифр (рекурсия): " << countDigitsRecursive(n) << endl;
+    cout << "Количество цифр (без рекурсии): " << countDigits(n) << endl;
 
     return 0;
 }
