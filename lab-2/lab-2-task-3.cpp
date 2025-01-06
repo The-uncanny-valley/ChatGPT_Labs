@@ -1,21 +1,23 @@
 #include <iostream>
 #include <cmath>
 #include <limits>
+using namespace std;
+
 
 int main() {
     double x, y, result, c;
 
     // Ввод значений x и y
-    std::cout << "Значение x: ";
-    std::cin >> x;
-    std::cout << "Значение y: ";
-    std::cin >> y;
+    cout << "x: ";
+    cin >> x;
+    cout << "y: ";
+    cin >> y;
 
     // Выбор функции f(x)
     int choice;
     double f;
-    std::cout << "Выберите функцию f(x): 1 - sh(x), 2 - x^2, 3 - exp(x): ";
-    std::cin >> choice;
+    cout << "Выберите функцию f(x): 1 - sh(x), 2 - x^2, 3 - exp(x): ";
+    cin >> choice;
 
     switch (choice) {
         case 1:
@@ -28,28 +30,28 @@ int main() {
             f = exp(x);
             break;
         default:
-            std::cout << "Неверный выбор функции." << std::endl;
+            cout << "Неверный выбор функции." << endl;
             return 1;
     }
 
     // Проверка условий
     if ((x - y) == 0) {
         c = pow(f, 2.0) + cbrt(y) + sin(y);
-        std::cout << "Выбрана ветвь x - y = 0." << std::endl;
+        cout << "Выбрано x - y = 0." << endl;
     } else if ((x - y) > 0) {
         if (x <= 0) { // Проверка для логарифма
-            std::cout << "Ошибка: ln(x) не определен для x <= 0." << std::endl;
+            std::cout << "ln(x) не существует для x <= 0!" << endl;
             return 1;
         }
         c = pow(f - y, 2.0) + log(x);
-        std::cout << "Выбрана ветвь x - y > 0." << std::endl;
+        cout << "Выбрана ветвь x - y > 0." << endl;
     } else { // x - y < 0
         c = pow(y - f, 2.0) + tan(y);
-        std::cout << "Выбрана ветвь x - y < 0." << std::endl;
+        cout << "Выбрана ветвь x - y < 0." << endl;
     }
 
     // Вывод результата
-    std::cout << "Результат: c = " << c << std::endl;
+    cout << "Результат: c = " << c << endl;
 
     return 0;
 }
