@@ -2,41 +2,38 @@
 #include <string>
 using namespace std;
 
-// Define a structure to store student data
 struct Student {
-    string fullName;      // Student's full name
-    string group;         // Group
-    double averageScore;  // Average score
-    double income;        // Income per family member
+    string fullName;      // имя
+    string group;         // группа
+    double averageScore;  // средний бал
+    double income;        // доход на члена семьи
 };
 
 int main() {
     int n;
-    cout << "Enter the number of students: ";
+    cout << "Количество студентов: ";
     cin >> n;
 
-    Student students[100]; // Static array for students (maximum 100)
+    Student students[100]; // массив
 
-    // Input student data
     for (int i = 0; i < n; i++) {
-        cout << "Enter data for student " << i + 1 << ":\n";
-        cout << "Full name: ";
-        cin.ignore(); // Ignore the newline character after the previous input
+        cout << "Введите информацию " << i + 1 << ":\n";
+        cout << "Имя: ";
+        cin.ignore(); // пропуск первого символа
         getline(cin, students[i].fullName);
-        cout << "Group: ";
+        cout << "Группа: ";
         getline(cin, students[i].group);
-        cout << "Average score: ";
+        cout << "Средний бал: ";
         cin >> students[i].averageScore;
-        cout << "Income per family member: ";
+        cout << "Доход на члена семьи: ";
         cin >> students[i].income;
     }
 
-    // Input the minimum salary
     double minSalary;
-    cout << "Enter the minimum salary: ";
+    cout << "Мнимальная зарплата: ";
     cin >> minSalary;
 
-    // Bubble sort without using swap
+    // Пузырьковая сортировка
     for (int i = 0; i < n - 1; i++) {
         for (int j = 0; j < n - i - 1; j++) {
             bool needToSwap = false;
@@ -58,12 +55,11 @@ int main() {
         }
     }
 
-    // Output the sorted list of students
-    cout << "\nOrder of allocation for dormitory places:\n";
+    cout << "\nПорядок предоставления мест в общежитии:\n";
     for (int i = 0; i < n; i++) {
-        cout << students[i].fullName << " (Group: " << students[i].group
-             << ", Average score: " << students[i].averageScore
-             << ", Income: " << students[i].income << ")\n";
+        cout << students[i].fullName << " (Группа: " << students[i].group
+             << ", Средний бал: " << students[i].averageScore
+             << ", Доход: " << students[i].income << ")\n";
     }
 
     return 0;
