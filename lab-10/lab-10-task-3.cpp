@@ -1,6 +1,6 @@
 #include <iostream>
-#include <fstream>
-#include <vector>
+#include <fstream> // для работы с файлами
+#include <vector> // динамический массив
 #include <iomanip>
 #include <string>
 
@@ -22,7 +22,7 @@ void addBuses(const string& filename) {
     }
 
     int count;
-    cout << "Введите количество рейсов для добавления: ";
+    cout << "Введите количество рейсов: ";
     cin >> count;
 
     for (int i = 0; i < count; ++i) {
