@@ -7,17 +7,17 @@
 using namespace std;
 
 struct Bus {
-    int number;                 // Номер рейса
-    string destination;         // Пункт назначения
-    string departureTime;       // Время отправления
-    string arrivalTime;         // Время прибытия
+    int number;                 // номер рейса
+    string destination;         // пункт назначения
+    string departureTime;       // время отправления
+    string arrivalTime;         // время прибытия
 };
 
 // Добавление рейсов в файл
 void addBuses(const string& filename) {
     ofstream file(filename, ios::binary | ios::app);
     if (!file) {
-        cerr << "Ошибка при открытии файла для записи.\n";
+        cerr << "Ошибка при открытии файла\n";
         return;
     }
 
@@ -45,11 +45,11 @@ void addBuses(const string& filename) {
     cout << "Данные успешно добавлены.\n";
 }
 
-// Функция для вывода рейсов, прибывающих раньше заданного времени
+// функция для вывода рейсов, прибывающих раньше заданного времени
 void listBuses(const string& filename, const string& specifiedTime) {
     ifstream file(filename, ios::binary);
     if (!file) {
-        cerr << "Ошибка при открытии файла для чтения.\n";
+        cerr << "Ошибка при открытии файла\n";
         return;
     }
 
@@ -83,7 +83,7 @@ int main() {
         cout << "1. Добавить рейсы в файл\n";
         cout << "2. Показать рейсы, прибывающие раньше заданного времени\n";
         cout << "3. Выход\n";
-        cout << "Выберите действие: ";
+        cout << "Действие: ";
         cin >> choice;
 
         switch (choice) {
@@ -98,7 +98,7 @@ int main() {
             case '3':
                 return 0;
             default:
-                cout << "Неверный выбор\n";
+                cout << "Неправильный ввод\n";
         }
     }
 }
