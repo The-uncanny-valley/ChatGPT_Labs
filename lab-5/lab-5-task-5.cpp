@@ -12,7 +12,7 @@ bool isSymmetric(int* row, int cols) {
 
 int main() {
     int n, m;
-    cout << "Введите количество строк (N) и столбцов (M): ";
+    cout << "Количество строк (N) и столбцов (M): ";
     cin >> n >> m;
 
     // Динамическое выделение памяти для матрицы
@@ -21,7 +21,7 @@ int main() {
         matrix[i] = new int[m];
     }
 
-    cout << "Введите элементы матрицы:" << endl;
+    cout << "Элементы матрицы:" << endl;
     for (int i = 0; i < n; ++i) {
         for (int j = 0; j < m; ++j) {
             cin >> matrix[i][j];
